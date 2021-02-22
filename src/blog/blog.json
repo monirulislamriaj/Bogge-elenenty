@@ -1,0 +1,4 @@
+{
+  "layout": "_layouts/single-blog.njk",
+  "tags": "blog"
+}

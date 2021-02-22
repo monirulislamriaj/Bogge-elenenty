@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8" />
+  <title>{{ setting.title }}</title>
+
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <!-- Theme Stylesheet -->
+  <link href="/assets/css/style.css" rel="stylesheet" />
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="/assets/images/favicon.svg" type="image/x-icon" />
+  <link rel="icon" href="/assets/images/favicon.svg" type="image/x-icon" />
+</head>
+
+<body>
+
+<!-- Navbar Start -->
+<nav class="main-nav navbar navbar-expand-lg">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand" href="/">
+      <img class="logo-main" src="{{ setting.logo }}" alt="logo" />
+    </a>
+    <!-- Toogle Button -->
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mainNav">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <div class="collapse navbar-collapse nav-list" id="mainNav">
+      <!-- Navigation Links -->
+      <ul class="navbar-nav ml-auto">
+        {% for menu in setting.menu %} 
+          <li class="nav-item active ">
+            <a href="{{ menu.url }}" class="nav-link scroll">{{ menu.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      <!-- Social Link -->
+      <ul class="main-nav-social">
+        <li>
+          <a href="https://www.facebook.com/{{ setting.facebookUsername }}"><i class="fa fa-facebook"></i></a>
+        </li>
+        <li>
+          <a href="https://www.twitter.com/{{ setting.twitterUsername }}"><i class="fa fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/{{ setting.instagramUsername }}"><i class="fa fa-instagram"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Navbar End -->
+
+{% block content %}
+  {{ content | safe }}
+{% endblock content %}
+
+<section class="instagram">
+  <a href="https://www.instagram.com/{{ setting.instaUsername }}">
+    <i class="fa fa-instagram" aria-hidden="true"></i>
+    <span>@{{ setting.author }}</span>
+  </a>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="instagram-item">
+            {% for insta in setting.instagram %} 
+          <div class="instagram-item-thum">
+            <img src="{{ insta.image }}" alt="image">
+          </div>
+        {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6 mx-auto text-center">
+        <div class="footer-logo">
+          <img src="{{ setting.logo }}" alt="logo" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 mx-auto">
+        <div class="footer-nav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 mx-auto">
+        <div class="sociale-icon">
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/{{ setting.facebookUsername }}"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com/{{ setting.twitterUsername }}"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/{{ setting.instagramUsername }}"><i class="fa fa-instagram"></i></a>
+          </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="copy-right">
+          <p>© Copyright 2021l - All Rights Reserved by staticmania</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Google Map -->
+<script src="https://maps.googleapis.com/maps/api/js?key={{ setting.googleMapAPI }}&libraries=geometry"></script>
+
+<!-- Vendor JS -->
+<script src="/assets/js/vendor.js"></script>
+<!-- Main JS -->
+<script src="/assets/js/script.js"></script>
+<!-- form-handler -->
+<script src="/assets/js/form-handler.js"></script>
+</body>
+
+</html>

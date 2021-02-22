@@ -1,0 +1,78 @@
+{
+  "title": "Blogge-Eleventy",
+  "author": "Mary Astor",
+  "authorLogo": "/assets/images/author.png",
+  "logo": "/assets/images/logo.svg",
+  "phone": "+33-257634 534",
+  "phone-2": "(+12) 800 123 45 68",
+  "email": "hello@example.com",
+  "address": "Lorem 142 Str., 2352, Ipsum, State, USA",
+  "openTime": "10am to 6pm",
+  "closeTime": "(close at 5pm Sundays)",
+  "instaUsername": "mary_astor",
+  "facebookUsername": "mary_astor",
+  "twitterUsername": "mary_astor",
+  "linkedinUsername": "mary_astor",
+  "formspreeFormUrl": "https://formspree.io/f/mgeprrvl",
+  "googleMapAPI": "AIzaSyC9rV6yesIygoVKTD6QLf_iCa9eiIIHqZ0",
+  "socials": [
+    {
+      "name": "mary_astor",
+      "url": "https://www.facebook.com/"
+    },
+    {
+      "name": "twitter",
+      "url": "https://www.twitter.com/"
+    },
+    {
+      "name": "linkedin",
+      "url": "https://www.linkedin.com/"
+    },
+    {
+      "name": "pinterest",
+      "url": "https://www.pinterest.com/"
+    }
+  ],
+
+  "menu": [
+    {
+      "key": "home",
+      "url": "/",
+      "title": "home"
+    },
+    {
+      "key": "about",
+      "url": "/about",
+      "title": "About"
+    },
+    {
+      "key": "contact",
+      "url": "/contact",
+      "title": "Contact"
+    }
+    
+  ],
+
+  "instagram": [
+    {
+      "image": "/assets/images/blog/case-studies-1.png"
+    },
+    {
+      "image": "/assets/images/blog/case-studies-2.png"
+    },
+    {
+      "image": "/assets/images/blog/case-studies-3.png"
+    },
+    {
+      "image": "/assets/images/blog/case-studies-4.png"
+    },
+    {
+      "image": "/assets/images/blog/case-studies-5.png"
+    },
+    {
+      "image": "/assets/images/blog/case-studies-6.png"
+    }
+  ]
+
+
+}

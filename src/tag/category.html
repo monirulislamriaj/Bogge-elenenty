@@ -1,0 +1,45 @@
+---
+layout: "base.njk"
+---
+<section class="blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <div class="blog-section-title">
+          <h2>Travel</h2>
+          <p>View the latest news on Travel</p>
+        </div>
+        {% for post in collections.blog %} 
+       <article class="blog-post">
+            <div class="blog-post-thumb">
+              <img src="{{ post.data.thumbnail }}" alt="blog-thum" />
+            </div>
+            <div class="blog-post-content">
+              <div class="blog-post-tag">
+                <a href="/category">{{ post.data.tag }}</a>
+              </div>
+              <div class="blog-post-title">
+                <a href="{{ post.url }}">{{ post.data.title }}</a>
+              </div>
+              <div class="blog-post-meta">
+                <ul>
+                  <li>By <a href="/about">{{ setting.author }}</a></li>
+                  <li>
+                    <i class="fa fa-clock-o"></i>
+                   {{ post.date.toDateString() }} - {{ post.data.readTime }}
+                  </li>
+                </ul>
+              </div>
+              <p>
+                {# {{ Summary}} #}
+              </p>
+              <a href="{{ post.url }}" class="blog-post-action">read more <i class="fa fa-angle-right"></i></a>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+
