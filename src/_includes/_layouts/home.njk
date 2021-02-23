@@ -43,8 +43,7 @@
           <h2>{{ blog.title }}</h2>
           <p>{{ blog.description }}</p>
         </div>
-        {% for post in collections.blog %} 
-        {% if (loop.index <= 3) %}
+        {% for post in posts %} 
           <article class="blog-post">
             <div class="blog-post-thumb">
               <img src="{{ post.data.thumbnail }}" alt="blog-thum" />
@@ -71,42 +70,65 @@
               <a href="{{ post.url }}" class="blog-post-action">read more <i class="fa fa-angle-right"></i></a>
             </div>
           </article>
-        {% endif %}
         {% endfor %}
-        
+        {# <nav aria-labelledby="my-pagination">
+          <ol>
+          {%- for pageEntry in pagination.pages %}
+              <li><a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>Page {{ loop.index }}</a></li>
+          {%- endfor %}
+          </ol>
+        </nav> #}
+        <div class="blog-post-pagination">
+          <nav aria-label="Page navigation example" class="nav-bg">
+            <ul class="pagination">
+              {%- for pageEntry in pagination.pages %}
+              <li class="page-item">
+                <a href="{{ pagination.hrefs[ loop.index0 ] }}" class="page-link {% if page.url == pagination.hrefs[ loop.index0 ] %}active{% endif %}">{{ loop.index }}</a>
+              </li>
+              {%- endfor %}
+              {% if pagination.href.next %}
+              <li class="page-item">
+                <a class="page-link" href="{{ pagination.href.next }}">
+                  <i class="fa fa-angle-right"></i>
+                </a>
+              </li>
+              {%- endif %}
+            </ul>
+          </nav>
+        </div>
       </div>
       <div class="col-lg-4">
         <div class="blog-post-widget">
           <div class="latest-widget-title">
             <h2>Trending post</h2>
           </div>
-        {% for post in collections.blog %} 
-        {% if (post.data.tranding === true ) %}
-          <div class="latest-widget">
-            <div class="latest-widget-thum">
-              <a href="single-blog.html">
-                <img src="{{ post.data.thumbnail }}" alt="blog-thum" /></a>
-              <div class="icon">
+          {% for post in collections.blog %} 
+          {% if (post.data.tranding === true ) %}
+            <div class="latest-widget">
+              <div class="latest-widget-thum">
                 <a href="single-blog.html">
-                  <img src="/assets/images/blog/icon.svg" alt="icon" /></a>
+                  <img src="{{ post.data.thumbnail }}" alt="blog-thum" /></a>
+                <div class="icon">
+                  <a href="single-blog.html">
+                    <img src="/assets/images/blog/icon.svg" alt="icon" /></a>
+                </div>
+              </div>
+              <div class="latest-widget-content">
+                <div class="content-title">
+                  <a href="{{ post.url}}">{{ post.data.title }}</a>
+                </div>
+                <div class="content-meta">
+                  <ul>
+                    <li>
+                      <i class="fa fa-clock-o"></i>
+                      October 19, 2020 - 2 min
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div class="latest-widget-content">
-              <div class="content-title">
-                <a href="{{ post.url}}">{{ post.data.title }}</a>
-              </div>
-              <div class="content-meta">
-                <ul>
-                  <li>
-                    <i class="fa fa-clock-o"></i>
-                    October 19, 2020 - 2 min
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        {% endif %}
-        {% endfor %}
+          {% endif %}
+          {% endfor %}
         </div>
       </div>
     </div>
