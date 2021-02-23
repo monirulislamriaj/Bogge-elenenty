@@ -43,7 +43,8 @@
           <h2>{{ blog.title }}</h2>
           <p>{{ blog.description }}</p>
         </div>
-        {% for post in posts %} 
+        {% for post in posts %}
+          {% if post.data.featured !== true %}
           <article class="blog-post">
             <div class="blog-post-thumb">
               <img src="{{ post.data.thumbnail }}" alt="blog-thum" />
@@ -65,19 +66,13 @@
                 </ul>
               </div>
               <p>
-                {# {{ Summary}} #}
+                {% excerpt post %}
               </p>
               <a href="{{ post.url }}" class="blog-post-action">read more <i class="fa fa-angle-right"></i></a>
             </div>
           </article>
+          {% endif %}
         {% endfor %}
-        {# <nav aria-labelledby="my-pagination">
-          <ol>
-          {%- for pageEntry in pagination.pages %}
-              <li><a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>Page {{ loop.index }}</a></li>
-          {%- endfor %}
-          </ol>
-        </nav> #}
         <div class="blog-post-pagination">
           <nav aria-label="Page navigation example" class="nav-bg">
             <ul class="pagination">

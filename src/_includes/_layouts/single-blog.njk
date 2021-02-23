@@ -36,16 +36,21 @@
           </div>
         </article>
         <div class="blog-single-presentation">
+           
           <ul>
-            <li> <a href="#" class="tag">PREVIOUS</a>
-              <a href="#" class="title">I Moved Across the Country
-                and Never Looked Back</a>
+            {% if prevPost %}
+            <li> <a href="{{ prevPost.url }}" class="tag">PREVIOUS</a>
+              <a href="{{ prevPost.url }}" class="title">{{ prevPost.data.title }}</a>
               <i class="fa fa-clock-o"></i>
-              October 19, 2020 - 2 min
+              {{ prevPost.data.date.toDateString() }}
             </li>
-            <li> <a href="#" class="tag">Next</a><a href="#" class="title">Every Next Level of Your Life
-                Will Demand a Different</a><i class="fa fa-clock-o"></i>
-              October 19, 2020 - 2 min</li>
+            {% endif %}
+            {% if nextPost %}
+            <li>
+              <a href="{{ nextPost.url }}" class="tag">Next</a><a href="{{ nextPost.url }}" class="title">{{ nextPost.data.title }}</a><i class="fa fa-clock-o"></i>
+              {{ nextPost.data.date.toDateString() }}
+            </li>
+            {% endif %}
           </ul>
         </div>
       </div>
