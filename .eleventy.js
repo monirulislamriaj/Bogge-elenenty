@@ -2,6 +2,7 @@
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
+    // next/prev
   eleventyConfig.addCollection("blog", function (collection) {
     const coll = collection.getFilteredByTag("blog");
 

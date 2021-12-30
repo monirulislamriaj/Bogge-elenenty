@@ -1,10 +1,10 @@
 ---
 layout: "base.njk"
 title: "Hi I Am Mary Astor"
-shapeLeft: "/assets/images/about/blob2.svg"
-shapeRight: "/assets/images/about/blob1.svg"
+shapeLeft: "images/about/blob2.svg"
+shapeRight: "images/about/blob1.svg"
 Description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.,consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo "
-banner: "/assets/images/about/banner.png"
+banner: "images/about/banner.png"
 subTitle: "Hey there, what’s up?"
 descriptionTow: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut laboreet dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. <br> <br>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.consetetur sadipscing elitr, sed diam nonumy."
 ---
@@ -19,12 +19,12 @@ descriptionTow: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di
           <p>{{ Description }}</p>
           <div class="banner">
             <div class="about-shape-right-top">
-              <img src="{{ shapeRight }}" alt="svg">
+              <img src="/assets/{{ shapeRight }}" alt="svg">
             </div>
             <div class="about-shape-left-bottom">
-              <img src="{{ shapeLeft}}" alt="svg">
+              <img src="/assets/{{ shapeLeft}}" alt="svg">
             </div>
-            <img src="{{ banner }}" alt="banner">
+            <img src="/assets/{{ banner }}" alt="banner">
           </div>
           <h3>{{ subTitle }}</h3>
           <p>{{ descriptionTow }}</p>
@@ -37,7 +37,7 @@ descriptionTow: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di
             <a href="https://www.twitter.com/{{ setting.twitterUsername }}"><i class="fa fa-twitter"></i></a>
           </li>
           <li>
-            <a href="https://www.instagram.com/{{ setting.instagramUsername }}"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.instagram.com/{{ setting.instaUsername }}"><i class="fa fa-instagram"></i></a>
           </li>
         </ul>
         </div>

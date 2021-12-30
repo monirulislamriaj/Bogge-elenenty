@@ -25,7 +25,7 @@
               </ul>
             </div>
             <div class="featured-post-thumb">
-              <img src="{{ post.data.thumbnail }}" alt="feature-post-thumb" />
+              <img src="/assets/{{ post.data.thumbnail }}" alt="feature-post-thumb" />
             </div>
           </article>
         {% endif %}
@@ -47,7 +47,7 @@
           {% if post.data.featured !== true %}
           <article class="blog-post">
             <div class="blog-post-thumb">
-              <img src="{{ post.data.thumbnail }}" alt="blog-thum" />
+              <img src="/assets/{{ post.data.thumbnail }}" alt="blog-thum" />
             </div>
             <div class="blog-post-content">
               <div class="blog-post-tag">
@@ -102,7 +102,7 @@
             <div class="latest-widget">
               <div class="latest-widget-thum">
                 <a href="single-blog.html">
-                  <img src="{{ post.data.thumbnail }}" alt="blog-thum" /></a>
+                  <img src="/assets/{{ post.data.thumbnail }}" alt="blog-thum" /></a>
                 <div class="icon">
                   <a href="single-blog.html">
                     <img src="/assets/images/blog/icon.svg" alt="icon" /></a>

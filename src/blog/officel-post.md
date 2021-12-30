@@ -4,8 +4,8 @@
   tag: "office"
   tranding: FALSE
   readTime: "3 min"
-  thumbnail: /assets/images/blog/blog-thum-4.png
-  featureImage: /assets/images/blog/blog-single.png
+  thumbnail: images/blog/blog-thum-4.png
+  featureImage: images/blog/blog-single.png
 ---
 
 consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
